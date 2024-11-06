@@ -1,4 +1,5 @@
 import math 
+import datetime 
 
 print("Start the project.")
 
@@ -9,3 +10,12 @@ def is_prime(num):
         if num % i == 0:
             return False
     return True
+
+def greet():
+    current = datetime.datetime.now().strftime("%H")
+    if int(current) >= 6 and int(current) < 12:
+        print("Good morning!")
+    elif int(current) >= 12 and int(current) < 16:
+        print("Good afternoon!")
+    else:
+        print("Good evening!")
